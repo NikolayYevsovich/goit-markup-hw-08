@@ -1,0 +1,49 @@
+.auth-nav {
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.auth-nav__mail,
+.auth-nav__phone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.auth-nav__icon {
+	margin-right: 10px;
+	fill: var(--secondary-font-color);
+	fill: currentColor;
+}
+
+.auth-nav__item {
+	list-style-type: none;
+
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
+}
+
+
+
+.auth-nav__mail,
+.auth-nav__phone {
+	font-family: var(--main-font);
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: var(--secondary-font-color);
+	text-decoration: none;
+	transition: color var(--anim-fast);
+
+	&:focus,
+	&:hover,
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		cursor: pointer;
+	}
+}
+

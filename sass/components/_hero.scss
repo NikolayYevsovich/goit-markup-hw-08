@@ -1,0 +1,59 @@
+.hero {
+	background-color: var(--secondary-bg-color);
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url(../images/hero-background.jpg);
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.hero__title {
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--sec-bg-font-color);
+	width: 696px;
+	margin: 0px auto;
+	margin-bottom: 30px;
+}
+
+.hero--content {
+	text-align: center;
+}
+
+.hero-btn {
+	font-family: var(--main-font);
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 1.88;
+	display: block;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: var(--sec-bg-font-color);
+	background-color: var(--accent-color);
+	cursor: pointer;
+	margin: 0px auto;
+	min-width: 200px;
+	height: 50px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: background-color var(--anim-fast), border var(--anim-fast);
+
+
+	&:hover,
+	&:focus {
+		background-color: var(--hero-btn-accent);
+		border: 1px solid var(--accent-color);
+	}
+}
+

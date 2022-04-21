@@ -1,0 +1,18 @@
+.footer-logo {
+	text-decoration: none;
+	margin-left: 0px;
+}
+
+.footer-logo__first-part,
+.footer-logo__second-part {
+	font-family: var(--secondary-font);
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	color: var(--accent-color);
+}
+
+.footer-logo__second-part {
+	color: var(--sec-bg-font-color);
+}

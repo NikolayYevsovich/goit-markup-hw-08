@@ -1,0 +1,49 @@
+.address {
+	margin-left: 0px;
+}
+
+.address__item {
+	list-style-type: none;
+
+	&:not(:last-child) {
+		margin-bottom: 9px;
+	}
+}
+
+.address__link {
+	font-family: var(--main-font);
+	font-style: normal;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: var(--sec-bg-font-color);
+	text-decoration: none;
+}
+
+.address__list {
+	margin-top: 20px;
+}
+
+.address__mail,
+.address__phone,
+.address__link {
+	font-family: var(--main-font);
+	font-style: normal;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: rgba(255, 255, 255, 0.6);
+	text-decoration: none;
+	transition: color var(--anim-fast);
+
+	&:hover,
+	&:focus,
+	&:hover,
+	&:focus,
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.adress-wrapper {
+	margin-right: 70px;
+}

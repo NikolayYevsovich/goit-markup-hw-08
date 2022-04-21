@@ -1,0 +1,27 @@
+:root {
+	// Fonts
+	--main-font: Roboto, sans-serif;
+	--secondary-font: Raleway, sans-serif;
+
+	// Font colors
+	--main-font-color: #212121;
+	--secondary-font-color: #757575;
+	--sec-bg-font-color: #ffffff;
+	--team-txt-color: #eeeeee;
+
+	// Background colors
+	--main-bg-color: #ffffff;
+	--secondary-bg-color: #2f303a;
+	--third-bg-color: #f5f4fa;
+
+	// Selection colors
+	--accent-color: #2196f3;
+	--hero-btn-accent: #188ce8;
+
+	// Icon colors
+	--socials-icon-color: #afb1b8;
+
+	// Effects
+	--anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	--anim-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}

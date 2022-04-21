@@ -1,0 +1,17 @@
+.logo__first-part,
+.logo__second-part {
+	font-family: var(--secondary-font);
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 1.19;
+	color: #000000;
+}
+
+.logo {
+	text-decoration: none;
+}
+
+.logo__first-part {
+	color: var(--accent-color);
+}
+

@@ -1,0 +1,20 @@
+.footer {
+	background-color: var(--secondary-bg-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.footer-wrapper {
+	display: flex;
+}
+
+// Footer logo
+@import "./footer-logo";
+
+// Footer address
+@import "./footer-address";
+
+// Footer socials
+@import "./footer-socials";
+
+// Footer subscription form
+@import "./footer-form";
