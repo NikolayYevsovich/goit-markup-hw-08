@@ -1,37 +1,62 @@
 .auth-nav {
-	display: flex;
 	margin-left: auto;
-	align-items: center;
-	justify-content: center;
-}
-
-.auth-nav__mail,
-.auth-nav__phone {
+	
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	@media screen and (min-width: 1200px) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.auth-nav__icon {
-	margin-right: 10px;
-	fill: var(--secondary-font-color);
-	fill: currentColor;
-}
-
-.auth-nav__item {
-	list-style-type: none;
-
-	&:not(:last-child) {
-		margin-right: 50px;
 	}
 }
 
+@media screen and (min-width: 1200px) {
+	.auth-nav__mail,
+	.auth-nav__phone {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.auth-nav__item:not(:last-child) {
+		margin-right: 50px;
+	}
+	
+}
 
+.auth-nav__mail-icon,
+.auth-nav__phone-icon {
+	margin-right: 10px;
+	fill: var(--secondary-font-color);
+	fill: currentColor;	
+}
+.auth-nav__mail-icon{
+@media screen and (min-width: 1200px){
+	width: 16px;
+	height: 12px;
+}
+}
+
+.auth-nav__phone-icon{
+@media screen and (min-width: 1200px) {
+	width: 10px;
+	height: 16px;
+}
+}
+
+.auth-nav__item:not(:last-child){
+	
+
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 10px;
+	}
+}
 
 .auth-nav__mail,
 .auth-nav__phone {
 	font-family: var(--main-font);
 	font-weight: 500;
+	font-size: 12px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--secondary-font-color);
@@ -45,5 +70,8 @@
 		color: var(--accent-color);
 		cursor: pointer;
 	}
-}
 
+	@media screen and (min-width: 1200px) {
+		font-size: 14px;
+	}
+}

@@ -1,240 +1,871 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__nav-wrapper">
+        <nav class="nav">
+          <a class="logo" href="./index.html" lang="en">
+            <span class="logo__first-part">Web</span
+            ><span class="logo__second-part">Studio</span></a
+          >
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="auth-nav">
+          <li class="auth-nav__item">
+            <a class="auth-nav__mail" href="mailto:info@devstudio.com">
+              <svg class="auth-nav__mail-icon" width="14" height="10">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="auth-nav__item">
+            <a class="auth-nav__phone" href="tel:+380961111111">
+              <svg class="auth-nav__phone-icon" width="10" height="14">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <!-- Mobile menu button -->
+        <button class="mobile-btn" data-menu-button type="button" aria-expanded="false">
+          <svg class="mobile-btn__icon" width="40" height="40">
+            <use class="menu-btn__open" href="./images/icons.svg#icon-mobile-open"></use>
+            <use class="menu-btn__close" href="./images/icons.svg#icon-mobile-close"></use>
+          </svg>
+        </button>
+        <!-- Mobile menu -->
+        <div class="mobile-menu" data-menu>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__list-item">
+              <a class="mobile-menu__link link" href="./index.html">Студия</a>
+            </li>
+            <li class="mobile-menu__list-item">
+              <a class="mobile-menu__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mobile-menu__list-item">
+              <a class="mobile-menu__link link" href="">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobile-group">
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts-info link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts-info link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__socials">
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="">Instagram</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="">Twitter</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="">Facebook</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Unique content -->
+    <main>
+      <!-- Portfolio Section -->
+      <section class="portfolio section">
+        <div class="container">
+          <h1 class="portfolio__title">Портфолио</h1>
+          <!-- Portfolio Filter -->
+          <ul class="portfolio-filter">
+            <li class="portfolio-filter__item">
+              <button class="portfolio-filter__btn" type="button">Все</button>
+            </li>
+            <li class="portfolio-filter__item">
+              <button class="portfolio-filter__btn" type="button">Веб-сайты</button>
+            </li>
+            <li class="portfolio-filter__item">
+              <button class="portfolio-filter__btn" type="button">Приложения</button>
+            </li>
+            <li class="portfolio-filter__item">
+              <button class="portfolio-filter__btn" type="button">Дизайн</button>
+            </li>
+            <li class="portfolio-filter__item">
+              <button class="portfolio-filter__btn" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <!-- Portfolio Gallery -->
+          <ul class="portfolio-list">
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project1-lg.webp   1x,
+                        ./images/portfolio/desktop/project1-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project1-lg.jpg   1x,
+                        ./images/portfolio/desktop/project1-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project1-md.webp   1x,
+                        ./images/portfolio/teblet/project1-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project1-md.jpg   1x,
+                        ./images/portfolio/mobile/project1-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project1-sm.webp   1x,
+                        ./images/portfolio/mobile/project1-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project1-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project1-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Студия</title>
-	<!-- Шрифты -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-		rel="stylesheet">
-	<!-- Нормализация стилей -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
-	<!-- Кастомные стили -->
-	<link rel="stylesheet" href="./css/main.min.css">
-</head>
-
-<body class="page">
-	<!-- Хедер -->
-	<header class="header">
-		<div class="container header__nav-wrapper">
-			<nav class="nav">
-				<a class="logo" href="./index.html" lang="en"> <span class="logo__first-part">Web</span><span
-						class="logo__second-part">Studio</span></a>
-				<ul class="nav__list">
-					<li class="nav__item"><a class="nav__link" href="./index.html">Студия</a></li>
-					<li class="nav__item"><a class="nav__link nav__link--active" href="./portfolio.html">Портфолио</a></li>
-					<li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-				</ul>
-			</nav>
-			<ul class="auth-nav">
-				<li class="auth-nav__item"><a class="auth-nav__mail" href="mailto:info@devstudio.com">
-						<svg class="auth-nav__icon" width="16" height="12">
-							<use href="./images/icons.svg#icon-envelope"></use>
-						</svg>
-						info@devstudio.com</a></li>
-				<li class="auth-nav__item"><a class="auth-nav__phone" href="tel:+380961111111">
-						<svg class="auth-nav__icon" width="10" height="16">
-							<use href="./images/icons.svg#icon-smartphone"></use>
-						</svg>
-						+38 096 111 11 11</a></li>
-			</ul>
-		</div>
-	</header>
-	<!-- Уникальный контент -->
-	<main>
-		<!-- Фильтр страницы "Портфолио" -->
-		<section class="portfolio section">
-			<div class="container">
-			<h1 class="portfolio__title">Портфолио</H1>
-			<ul class="portfolio-filter">
-				<li class="portfolio-filter__item"><button class="portfolio-filter__btn" type="button">Все</button></li>
-				<li class="portfolio-filter__item"><button class="portfolio-filter__btn" type="button">Веб-сайты</button></li>
-				<li class="portfolio-filter__item"><button class="portfolio-filter__btn" type="button">Приложения</button></li>
-				<li class="portfolio-filter__item"><button class="portfolio-filter__btn" type="button">Дизайн</button></li>
-				<li class="portfolio-filter__item"><button class="portfolio-filter__btn" type="button">Маркетинг</button></li>
-			</ul>
-			<!-- Портфолио -->
-			<ul class="portfolio-list">
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-1.jpg" alt="Ноутбук" width="370" height="294">
-						<p class="portfolio-list__project-descr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
-						исчерпывающие сведения о компании или частном лице.</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Технокряк</h2>
-						<p class="portfolio-list__project-type">Веб-сайт</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-2.jpg" alt="Два баскетболиста" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus pariatur minus enim adipisci facere asperiores, optio neque veniam dolor vero et reiciendis quas maiores dignissimos!</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Постер New Orlean vs Golden Star</h2>
-						<p class="portfolio-list__project-type">Дизайн</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-3.jpg" alt="Логотип ресторана" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minima repudiandae voluptates eaque vero assumenda, veritatis itaque dolorum maxime consequatur deleniti? Delectus perferendis sint ipsam.</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Ресторан Seafood</h2>
-						<p class="portfolio-list__project-type">Приложение</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-4.jpg" alt="Наушники" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero natus maiores fugit neque recusandae dolor officiis officia, hic minima necessitatibus doloremque quia voluptatibus voluptate dolorum.</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Проект Prime</h2>
-						<p class="portfolio-list__project-type">Маркетинг</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-5.jpg" alt="Две коробки" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla quisquam sunt, laudantium velit praesentium fugit obcaecati quibusdam quasi, molestias vel modi totam, non repellat veritatis.</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Проект Boxes</h2>
-						<p class="portfolio-list__project-type">Приложение</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-6.jpg" alt="Монитор компьютера" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa labore voluptates modi consectetur, mollitia possimus quasi minus facere dolorem corrupti incidunt laboriosam excepturi illum explicabo.</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Inspiration has no Borders</h2>
-						<p class="portfolio-list__project-type">Веб-сайт</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-7.jpg" alt="Открытая книга" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. At vero ab fuga quas. Quos voluptatibus hic aperiam omnis a. Cum, illo! Minus mollitia itaque magnam?</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Издание Limited Edition</h2>
-						<p class="portfolio-list__project-type">Дизайн</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-8.jpg" alt="Бирка" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius mollitia aliquam suscipit maxime voluptates animi odit rerum sapiente obcaecati repellendus temporibus ea accusamus, hic quae?</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Проект LAB</h2>
-						<p class="portfolio-list__project-type">Маркетинг</p>
-						</div>
-					</a>
-				</li>
-				<li class="portfolio-list__item">
-					<a class="portfolio-list__card" href="">
-						<div class="portfolio-list__img-wrapper">
-						<img src="./images/pf-img-9.jpg" alt="Работа за ноутбуком" width="370" height="294">
-						<p class="portfolio-list__project-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error consequuntur officia, assumenda ullam rem repudiandae harum exercitationem quae vero odio accusamus asperiores provident aliquam?</p>
-						</div>
-						<div class="portfolio-list__txt">
-						<h2 class="portfolio-list__card-name">Growing Business</h2>
-						<p class="portfolio-list__project-type">Приложение</p>
-						</div>
-					</a>
-				</li>
-			</ul>
-			</div>
-		</section>
-	</main>
-	<!-- Футер -->
-		<footer class="footer">
-			<div class="container footer-wrapper">
-				<div class="adress-wrapper">
-					<a class="footer-logo" href="./index.html"> <span class="footer-logo__first-part">Web</span><span
-							class="footer-logo__second-part">Studio</span> </a>
-					<address class="address">
-						<ul class="address__list">
-							<li class="address__item">
-								<a class="address__link" href="https://goo.gl/maps/y68GMaV9kRyxERHZA" target="blank"
-									rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
-							</li>
-							<li class="address__item">
-								<a class="address__mail" href="mailto:info@example.com">info@example.com</a>
-							</li>
-							<li class="address__item">
-								<a class="address__phone" href="tel:+380991111111">+38 099 111 11 11</a>
-							</li>
-						</ul>
-					</address>
-				</div>
-				<div class="join">
-					<h3 class="join__title">ПРИСОЕДИНЯЙТЕСЬ</h3>
-					<ul class="join-list">
-						<li class="join-list__item"><a class="join-list__link" href="">
-								<svg class="join-list__icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-instagram"></use>
-								</svg>
-							</a></li>
-						<li class="join-list__item"><a class="join-list__link" href="">
-								<svg class="join-list__icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-twitter"></use>
-								</svg>
-							</a></li>
-						<li class="join-list__item"><a class="join-list__link" href="">
-								<svg class="join-list__icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-facebook"></use>
-								</svg>
-							</a></li>
-						<li class="join-list__item"><a class="join-list__link" href="">
-								<svg class="join-list__icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-linkedin"></use>
-								</svg>
-							</a></li>
-					</ul>
-				</div>
-				<div class="subscribtion">
-					<h3 class="subscribtion__title">Подпишитесь на рассылку</h3>
-					<form class="subscribtion__form">
-						<label for="email"></label>
-						<input class="subscribtion__mail" type="email" name="email" placeholder="E-mail">
-						<span class="subscribtion__btn-wrapper">
-							<button class="subscribtion__btn" type="submit"><span class="sub-txt">Подписаться</span>
-								<svg class="sub-icon" width="24" height="24">
-									<use href="./images/icons.svg#icon-subscribe"></use>
-								</svg>
-							</button>
-						</span>
-		
-					</form>
-				</div>
-			</div>
-		</footer>
-</body>
+                  <p class="portfolio-list__project-descr">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="portfolio-list__txt portfolio-list--txt">
+                  <h2 class="portfolio-list__card-name">Технокряк</h2>
+                  <p class="portfolio-list__project-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project2-lg.webp   1x,
+                        ./images/portfolio/desktop/project2-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project2-lg.jpg   1x,
+                        ./images/portfolio/desktop/project2-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project2-md.webp   1x,
+                        ./images/portfolio/teblet/project2-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project2-md.jpg   1x,
+                        ./images/portfolio/mobile/project2-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project2-sm.webp   1x,
+                        ./images/portfolio/mobile/project2-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project2-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/project2-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus pariatur
+                    minus enim adipisci facere asperiores, optio neque veniam dolor vero et
+                    reiciendis quas maiores dignissimos!
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Постер New Orlean vs Golden Star</h2>
+                  <p class="portfolio-list__project-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project3-lg.webp   1x,
+                        ./images/portfolio/desktop/project3-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project3-lg.jpg   1x,
+                        ./images/portfolio/desktop/project3-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project3-md.webp   1x,
+                        ./images/portfolio/teblet/project3-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project3-md.jpg   1x,
+                        ./images/portfolio/mobile/project3-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project3-sm.webp   1x,
+                        ./images/portfolio/mobile/project3-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project3-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project3-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minima repudiandae
+                    voluptates eaque vero assumenda, veritatis itaque dolorum maxime consequatur
+                    deleniti? Delectus perferendis sint ipsam.
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Ресторан Seafood</h2>
+                  <p class="portfolio-list__project-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project4-lg.webp   1x,
+                        ./images/portfolio/desktop/project4-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project4-lg.jpg   1x,
+                        ./images/portfolio/desktop/project4-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project4-md.webp   1x,
+                        ./images/portfolio/teblet/project4-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project4-md.jpg   1x,
+                        ./images/portfolio/mobile/project4-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project4-sm.webp   1x,
+                        ./images/portfolio/mobile/project4-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project4-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project4-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero natus maiores
+                    fugit neque recusandae dolor officiis officia, hic minima necessitatibus
+                    doloremque quia voluptatibus voluptate dolorum.
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Проект Prime</h2>
+                  <p class="portfolio-list__project-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project5-lg.webp   1x,
+                        ./images/portfolio/desktop/project5-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project5-lg.jpg   1x,
+                        ./images/portfolio/desktop/project5-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project5-md.webp   1x,
+                        ./images/portfolio/teblet/project5-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project5-md.jpg   1x,
+                        ./images/portfolio/mobile/project5-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project5-sm.webp   1x,
+                        ./images/portfolio/mobile/project5-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project5-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project5-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla quisquam sunt,
+                    laudantium velit praesentium fugit obcaecati quibusdam quasi, molestias vel modi
+                    totam, non repellat veritatis.
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Проект Boxes</h2>
+                  <p class="portfolio-list__project-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project6-lg.webp   1x,
+                        ./images/portfolio/desktop/project6-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project6-lg.jpg   1x,
+                        ./images/portfolio/desktop/project6-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project6-md.webp   1x,
+                        ./images/portfolio/teblet/project6-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project6-md.jpg   1x,
+                        ./images/portfolio/mobile/project6-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project6-sm.webp   1x,
+                        ./images/portfolio/mobile/project6-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project6-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project6-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa labore
+                    voluptates modi consectetur, mollitia possimus quasi minus facere dolorem
+                    corrupti incidunt laboriosam excepturi illum explicabo.
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Inspiration has no Borders</h2>
+                  <p class="portfolio-list__project-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project7-lg.webp   1x,
+                        ./images/portfolio/desktop/project7-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project7-lg.jpg   1x,
+                        ./images/portfolio/desktop/project7-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project7-md.webp   1x,
+                        ./images/portfolio/teblet/project7-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project7-md.jpg   1x,
+                        ./images/portfolio/mobile/project7-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project7-sm.webp   1x,
+                        ./images/portfolio/mobile/project7-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project7-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project7-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At vero ab fuga quas.
+                    Quos voluptatibus hic aperiam omnis a. Cum, illo! Minus mollitia itaque magnam?
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Издание Limited Edition</h2>
+                  <p class="portfolio-list__project-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project8-lg.webp   1x,
+                        ./images/portfolio/desktop/project8-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project8-lg.jpg   1x,
+                        ./images/portfolio/desktop/project8-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project8-md.webp   1x,
+                        ./images/portfolio/teblet/project8-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project8-md.jpg   1x,
+                        ./images/portfolio/mobile/project8-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project8-sm.webp   1x,
+                        ./images/portfolio/mobile/project8-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project8-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project8-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius mollitia aliquam
+                    suscipit maxime voluptates animi odit rerum sapiente obcaecati repellendus
+                    temporibus ea accusamus, hic quae?
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Проект LAB</h2>
+                  <p class="portfolio-list__project-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-list__item">
+              <a class="portfolio-list__card" href="">
+                <div class="portfolio-list__img-wrapper">
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project9-lg.webp   1x,
+                        ./images/portfolio/desktop/project9-lg2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/project9-lg.jpg   1x,
+                        ./images/portfolio/desktop/project9-lg2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                      srcset="
+                        ./images/portfolio/teblet/project9-md.webp   1x,
+                        ./images/portfolio/teblet/project9-md2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project9-md.jpg   1x,
+                        ./images/portfolio/mobile/project9-md2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <!-- Mobile Phone -->
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/project9-sm.webp   1x,
+                        ./images/portfolio/mobile/project9-sm2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/portfolio/mobile/project9-sm2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/portfolio/mobile/project9-sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio-list__project-descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error
+                    consequuntur officia, assumenda ullam rem repudiandae harum exercitationem quae
+                    vero odio accusamus asperiores provident aliquam?
+                  </p>
+                </div>
+                <div class="portfolio-list__txt">
+                  <h2 class="portfolio-list__card-name">Growing Business</h2>
+                  <p class="portfolio-list__project-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container footer-wrapper">
+        <div class="footer-group-wrapper">
+          <div class="adress-wrapper">
+            <a class="footer-logo" href="./index.html">
+              <span class="footer-logo__first-part">Web</span
+              ><span class="footer-logo__second-part">Studio</span>
+            </a>
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    class="address__link"
+                    href="https://goo.gl/maps/y68GMaV9kRyxERHZA"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__mail" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__phone" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join">
+            <h3 class="join__title">ПРИСОЕДИНЯЙТЕСЬ</h3>
+            <ul class="join-list">
+              <li class="join-list__item">
+                <a class="join-list__link" href="">
+                  <svg class="join-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-list__item">
+                <a class="join-list__link" href="">
+                  <svg class="join-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-list__item">
+                <a class="join-list__link" href="">
+                  <svg class="join-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-list__item">
+                <a class="join-list__link" href="">
+                  <svg class="join-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="subscribtion">
+          <h3 class="subscribtion__title">Подпишитесь на рассылку</h3>
+          <form class="subscribtion__form">
+            <label for="email"></label>
+            <input class="subscribtion__mail" type="email" name="email" placeholder="E-mail" />
+            <span class="subscribtion__btn-wrapper">
+              <button class="subscribtion__btn" type="submit">
+                <span class="sub-txt">Подписаться</span>
+                <svg class="sub-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-subscribe"></use>
+                </svg>
+              </button>
+            </span>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- Mobile Menu Opener -->
+    <script src="./js/menu.js"></script>
+  </body>
 </html>

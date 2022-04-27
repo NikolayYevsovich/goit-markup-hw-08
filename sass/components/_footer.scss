@@ -3,8 +3,10 @@
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
-.footer-wrapper {
-	display: flex;
+.footer-wrapper {	
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
 }
 
 // Footer logo

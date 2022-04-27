@@ -2,13 +2,22 @@
 .logo__second-part {
 	font-family: var(--secondary-font);
 	font-weight: bold;
-	font-size: 26px;
+	font-size: 24px;
 	line-height: 1.19;
 	color: #000000;
+	@media screen and (min-width: 1200px) {
+		font-size: 26px;
+		line-height: 1.19;
+	}
 }
 
 .logo {
 	text-decoration: none;
+	font-family: var(--secondary-font);
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.16;
+	color: #000000;	
 }
 
 .logo__first-part {

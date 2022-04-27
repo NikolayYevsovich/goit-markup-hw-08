@@ -10,6 +10,8 @@
 	visibility: visible;
 	pointer-events: all;
 	transition: opacity var(--anim-slow), visibility var(--anim-slow);
+	z-index: 2;
+	overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -19,7 +21,7 @@
 }
 
 .modal-wrapper {
-	width: 528px;
+	width: 450px;
 	background-color: rgba(255, 255, 255, 1);
 	border-radius: 4px;
 	position: absolute;
@@ -27,6 +29,22 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	padding: 40px;
+	z-index: 3;
+
+	@media screen and (max-width: 479px) {
+		max-width: 95%;
+	}
+	
+	@media screen and (min-width: 480px) {
+		width: 450px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 528px;
+	}
+	@media screen and (max-width: 1199px) {
+			text-align: center;
+	}
 }
 
 .backdrop__close-btn {

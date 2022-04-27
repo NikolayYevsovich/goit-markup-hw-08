@@ -1,12 +1,13 @@
 .contact-form {
 	width: 100%;
+	
 }
 
 .backdrop__form-title {
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.15;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.03em;	
 }
 
 .contact-form__field {
@@ -97,18 +98,36 @@
 
 .contact-form__checkbox-icon {
 	position: absolute;
-	left: 13px;
-	bottom: 4px;
-	transition: opacity var(--anim-fast);
+	top: 0;
+	left:3px;
+	
+	transition: opacity var(--anim-fast);	
+}
+
+@media screen and (min-width: 1200px) {
+	.contact-form__checkbox-icon{
+		left: 13px;
+		top: 4px;
+	}
+	
 }
 
 .contact-form__checkbox-icon-checked {
 	position: absolute;
-	left: 13px;
-	bottom: 4px;
+	top: 0;
+	left: 3px;
 	opacity: 0;
-	transition: opacity var(--anim-fast);
+	transition: opacity var(--anim-fast);	
 }
+
+
+@media screen and (min-width: 1200px) {
+	.contact-form__checkbox-icon-checked{
+		left: 13px;
+		top: 4px;
+	}	
+}
+
 
 .contact-form__checkbox {
 	position: absolute;
@@ -133,20 +152,39 @@
 
 .contact-form__policy-txt {
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.71;
+	font-size: 12px;
+	line-height: 1.16;
 	letter-spacing: 0.03em;
 	color: #757575;
 	margin-left: 21px;
+
+	@media screen and (max-width: 479px) {
+		font-size: 10px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 14px;
+		line-height: 1.71;
+	}
 }
 
 .contact-form__policy-link {
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.71;
+	font-size: 12px;
+	line-height: 1.16;
 	letter-spacing: 0.03em;
 	text-decoration-line: underline;
 	color: var(--accent-color);
+
+	@media screen and (max-width: 479px) {
+		font-size: 10px;
+	}
+
+
+	@media screen and (min-width: 1200px) {
+		font-size: 14px;
+		line-height: 1.71;
+	}	
 }
 
 .contact-form__btn-field {
@@ -173,3 +211,6 @@
 .contact-form__send-btn:focus {
 	background-color: var(--hero-btn-accent);
 }
+
+
+

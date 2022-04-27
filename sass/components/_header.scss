@@ -1,15 +1,24 @@
 .header {
-	display: flex;
-	align-items: center;
+	// display: flex;
+	// align-items: center;
 	border-bottom: 1px solid #ececec;
 	padding-top: 0px;
 	padding-bottom: 0px;
+
+	@media screen and (max-width: 767px){
+			padding-top: 16px;
+			padding-bottom: 16px;
+	}
 	
 }
 .header__nav-wrapper {
 	display: flex;
-	align-items: center;
+	align-items: center;	
 }
+
+@import "./mobile-btn";
+
+@import "./mobile-menu";
 // Header logo
 @import "./header-logo";
 
