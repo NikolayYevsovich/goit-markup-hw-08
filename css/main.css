@@ -23,6 +23,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1134,6 +1138,12 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .join__title {
+    text-align: left;
+  }
+}
+
 .join-list__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -1293,9 +1303,16 @@ img {
   justify-content: flex-start;
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio-filter {
+    margin-bottom: -15px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .portfolio-filter {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -1328,12 +1345,23 @@ img {
 }
 
 .portfolio-filter__item {
-  margin-bottom: 15px;
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-filter__item {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio-list {
   list-style-type: none;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-list {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {

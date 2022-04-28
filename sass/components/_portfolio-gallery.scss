@@ -1,6 +1,11 @@
 .portfolio-list {
 	list-style-type: none;	
 
+
+	@media screen and (max-width: 767px) {
+		margin-top: 40px;
+	}
+
 	@media screen  and (min-width: 768px) {
 		display: flex;
 		flex-wrap: wrap;

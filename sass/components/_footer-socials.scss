@@ -21,6 +21,10 @@
 	color: var(--main-bg-color);
 	margin-bottom: 20px;
 	text-align: center;
+
+	@media screen and (min-width: 1200px) {
+		text-align: left;
+	}
 }
 
 .join-list__item:not(:last-child) {
